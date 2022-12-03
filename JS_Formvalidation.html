@@ -3,41 +3,52 @@
 <head>
     <meta charset="utf-8" />
         <script src="JavaScript.js"></script>
+<style>
+    .error{
+        color:red;
+    }
+    .frm{
+        margin-top:50px;
+    }
+    .tdata{
+        text-align:right;
+    }
+</style>
 </head>
 <body>
     <center>
-        <font size="+3" color="red">Employee Registration Form</font>
-        <form onsubmit="return validate();">
+        <font size="+3">Registration Form</font>
+        <form class="frm" onsubmit="return validate();">
             <table>
                 <tr>
-                    <td>User ID:</td>
-                    <td><input type="text" name="uid" id="uid" /></td>
+                    <td class='tdata'>User ID[5 to 7 Characters]:</td>
+                    <td><input class="txt"type="text" name="uid" id="uid" /></td>
                     <td><div class="error" id="Uerr"></div></td>
                 </tr>
 
                 <tr>
-                    <td><label for="name">Password: </label></td>
+                    <td class='tdata'>Password[7 to 12 Characters]:</td>
                     <td><input type="password" id="psswd" name="psswd" /></td>
                     <td><div class="error" id="Perr"></div></td>
                 </tr>
 
                 <tr>
-                    <td><label for="name">Name: </label></td>
+                    <td class='tdata'>Name[Alphabetic Characters]:</td>
                     <td><input type="text" id="name" name="name" /></td>
                     <td><div class="error" id="nerr"></div></td>
                 </tr>
 
                 <tr>
-                    <td><label for="name">Address: </label></td>
+                    <td class='tdata'>Address[Alphanumerc Characters]:</td>
                     <td><input type="text" id="addr" name="addr" /></td>
                     <td><div class="error" id="aerr"></div></td>
                 </tr>
 
                 <tr>
-                    <td><label for="country">Country: </label></td>
+                    <td class='tdata'>Country[Must Select a Country]:</td>
                     <td>
                         <select name="country" id="country">
-                            <option value="0">Select</option>
+                            <option value="0">(Please Select a Country)</option>
                             <option value="India">India</option>
                             <option value="USA">USA</option>
                             <option value="England">England</option>
@@ -48,7 +59,7 @@
                 </tr>
 
                 <tr>
-                    <td><label for="zip">ZIP Code: </label></td>
+                    <td class='tdata'>ZIP Code[Alphanumerc Characters]:</td>
                     <td>
                         <input type="text" id="zip" name="zip" />
                     </td>
@@ -56,7 +67,7 @@
                 </tr>
 
                 <tr>
-                    <td><label for="email">Email: </label></td>
+                    <td class='tdata'>Email[Valid Email]:</td>
                     <td>
                         <input type="text" name="email" id="email" />
                     </td>
@@ -66,7 +77,7 @@
                 </tr>
 
                 <tr>
-                    <td><label for="sex">Sex: </label></td>
+                    <td class='tdata'>Sex[Select Male or Female]:</td>
                     <td>
                         <input type="radio" id="male" name="sex">
                         <label for="male">Male</label>
@@ -79,7 +90,7 @@
                 </tr>
 
                 <tr>
-                    <td><label for="language">Language: </label></td>
+                    <td class='tdata'>Language[Optional]:</td>
                     <td>
                         <input type="radio" id="English" name="language">
                         <label for="lang">English</label>
@@ -89,9 +100,9 @@
                 </tr>
 
                 <tr>
-                    <td><label for="About">About: </label></td>
+                    <td class='tdata'>About[Optional]:</td>
                     <td>
-                        <textarea id="about" name="about" rows="4" cols="50"></textarea>
+                        <textarea id="about" name="about" rows="10" cols="50"></textarea>
                     </td>
                 </tr>
 
